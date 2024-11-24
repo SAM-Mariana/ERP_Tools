@@ -1,0 +1,75 @@
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box;  /* Incluye el padding y el borde en el tamaño total del elemento */
+}
+
+body {
+    font-family: Arial, sans-serif;/*tipo te letra*/
+    display: flex;/*realiza el cuerpo de flex*/
+    flex-direction: column;
+    min-height: 100vh;/*el minimo de ancho es 100*/
+    background-image:url(../imagen/fondo.png);/*poner img de fondo*/
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    height: 100vh; /* Altura del cuerpo al 100% de la ventana */
+}
+/*barra de superior*/
+.navbar {
+    width: 100%;/*poner la navbar del 100% de la pantalla*/
+    height: 85px;/*con un 85 pixeles*/
+    background-color: #0d1b3a; /* Color de la barra*/
+}
+
+/*barra de estado*/
+.status-bar {
+    width: 100%;/*tener el tamano completo de la pantalla a lo largo*/
+    height: 85px;/*con un 85 pixeles*/
+    background-color: #0d1b3a; /*colo de la barra*/
+    position: fixed;/*coloca la pocion flex*/
+    bottom: 0; /* Coloca la barra en la parte inferior */
+    left: 0; /* Alinea la barra al lado izquierdo */
+    display: flex; /* Usa flex para el diseño */
+    justify-content: space-around; /* Espacio uniforme entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    font-size: 24px; /* Tamaño de fuente de 24 píxeles */
+    color: #e2e2e2; /* Color del texto */
+}
+
+.status-item span {
+    font-weight: bold;/*letras remarcadas*/
+    color: #ffffff;/*color blanco*/
+}
+
+
+/* formulario */
+form {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Asegura que los elementos estén uno debajo del otro */
+    width: 320px; /* Ancho del formulario */
+    margin: auto; /* Centra el formulario horizontalmente */
+    padding: 20px; /* Espacio interno */
+    background-color: transparent; /* Fondo blanco */
+    align-items: center;/*alinia al centro*/
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ancho completo para ocupar toda la línea */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 15px; /* Espacio entre los campos */
+    border: 3px solid #a9a9a9; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: transparent;/*fondo del input trasparente*/
+    margin-top: 15px;/*pones un espacio entre ellos*/
+}
+button{
+    width: 150px;/*largo del boton*/
+    height: 40px;/*ancho del boton*/
+    background-color:rgb(27, 126, 254);/*color*/
+    font-size: 17px;/*tamano de letra*/
+    color: #ffffff;/*letra blanca*/
+    border-radius: 5px;/*borde*/
+    border-color: transparent;/*borde del boton*/
+    margin-top: 30px;/*espacio superior entre input y boton*/
+}

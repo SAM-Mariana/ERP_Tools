@@ -1,0 +1,136 @@
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente del cuerpo */
+    flex-direction: column; /* Esta propiedad no tiene efecto a menos que el body sea un contenedor flex */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+}
+/*barra de superior*/
+.navbar {
+    width: 100%;/*un largo de toda la pantalla*/
+    height: 85px;/*ancho*/
+    background-color: #0d1b3a; /* Color oscuro para que sea visible */
+    display: flex;/*realiza flex la barra*/
+    align-items: center;/*lo alinia al centro*/
+    font-size: 24px;/*tamano de letra*/
+    color: #e2e2e2;/*color de le letra*/
+    position: relative; /* Permitir que los círculos tapen la navbar */
+    z-index: 1; /* Asegurar que la navbar esté encima de los círculos */
+   
+}
+.navbar-item {
+    margin-left: 500px;/*un espacio entre ellos del lado izquierdo*/
+    font-weight: bold;/*letras remarcadas*/
+    color: #ffffff;/*color blanco*/
+}
+
+#datetime {
+    margin-left: auto; /* Para alinear a la derecha */
+    font-weight: bold;/*letras remarcadas*/
+}
+/*barra de estado*/
+.status-bar {
+    width: 100%;/*tener el tamano completo de la pantalla a lo largo*/
+    height: 85px;/*con un 85 pixeles*/
+    background-color: #0d1b3a; /*colo de la barra*/
+    position: fixed;/*coloca la pocion flex*/
+    bottom: 0; /* Coloca la barra en la parte inferior */
+    left: 0; /* Alinea la barra al lado izquierdo */
+    display: flex; /* flex el diseño */
+    justify-content: space-around; /* Espacio uniforme entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    font-size: 24px; /* Tamaño de fuente de 24 píxeles */
+    color: #e2e2e2; /* Color del texto */
+}
+
+.status-item span {
+    font-weight: bold;/*letras remarcadas*/
+    color: #ffffff;/*color blanco*/
+}
+
+/*mensaje*/
+.container {
+    display: flex;/*flex el diseno*/
+    position: relative; /* Establece la posición relativa del contenedor */
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.rectangle {
+    width: 700px; /* Ajustar el ancho según sea necesario */
+    height: 780px; /* Ajustar la altura según sea necesario */
+    position: absolute; /* Establece la posición relativa del contenedor */
+    z-index: 0; /* Detrás de la navbar */
+    margin-top: 20%;
+}
+.circle {
+    z-index: 0; /* Detrás de la navbar */
+}
+.center-circle {
+    width:auto;/*el largo su tamano es auto*/
+    margin-top: 5px;/*espacio superir*/
+    margin-left: 50px;/*espacio izquierdo*/
+}
+
+.offset-circle {
+    width: 190px;/*ancho*/
+    height: 65px;/*largo*/
+    margin-top: auto;/*margen superior auto*/
+    margin-left: 40px;/*margen izquierdo */
+}
+
+/*seccion de acciones*/
+.container-imag {
+    display: flex;/*flex del diseno */
+    flex-grow: 1; /* Ocupa el espacio restante */
+    justify-content:center; /* Mueve el contenido a la centro */
+    margin-top: 20%;/*margen superior*/
+}
+
+.image-gallery {
+    display: grid; /* Activa el diseño de grid para el contenedor */
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 10px; /* Espacio de 10 píxeles entre las imágenes */
+    width: 1000px; /* Ancho fijo de la galería */
+    padding: 10px; /* Espacio alrededor del contenido de la galería */
+    direction: rtl; /* Cambia la dirección del texto a derecha a izquierda */
+}
+
+.image-gallery img {
+    width: 100%; /* Imágenes ocupan todo el espacio de la celda */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.empty {
+    background-color: transparent; /* Color de fondo para celdas vacías */
+    height: 100px; /* Altura de las celdas vacías */
+}
+/*divicion en dos partes*/
+.two-columns {
+    display: flex; /* Activa el diseño flexbox para el contenedor */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten si el espacio es insuficiente */
+}
+
+.left-column,
+.right-column {
+    flex: 1; /* Cada columna ocupará el mismo espacio disponible */
+    padding: 20px; /* Espacio interno en cada columna */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+@media (max-width: 768px) {
+    .left-column,
+    .right-column {
+        flex-basis: 100%; /* En pantallas pequeñas, cada columna ocupa el 100% del ancho */
+    }
+}
+
+.mensaje { 
+    width: 150px; /* Ancho fijo para el elemento */
+    height: 80px; /* Altura fija para el elemento */
+    margin-top: 40%; /* Espacio superior del 40% del contenedor padre */
+}

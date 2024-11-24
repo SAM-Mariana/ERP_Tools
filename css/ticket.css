@@ -1,0 +1,100 @@
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente del cuerpo */
+    flex-direction: column; /* Esta propiedad no tiene efecto a menos que el body sea un contenedor flex */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+}
+.navbar {
+    width: 100%; /* Ancho completo de la barra de navegación */
+    height: 85px; /* Altura de la barra de navegación */
+    background-color: #0d1b3a; /* Color de fondo oscuro para la barra */
+    display: flex; /* Activa flexbox para alinear los elementos dentro de la barra */
+    align-items: center; /* Centra verticalmente los elementos dentro de la barra */
+    font-size: 24px; /* Tamaño de fuente para el texto de la barra */
+    color: #e2e2e2; /* Color del texto en la barra */
+    position: relative; /* Permite que otros elementos se superpongan a la barra */
+    z-index: 1; /* Asegura que la barra esté encima de otros elementos con menor z-index */
+}
+
+.navbar-item {
+    margin-left: 500px; /* Espacio a la izquierda de cada elemento de la barra */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    color: #ffffff; /* Color blanco para el texto de los elementos */
+}
+
+#datetime {
+    margin-left: auto; /* Alinea el elemento a la derecha dentro del contenedor flex */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+}
+
+/* Barra de estado */
+.status-bar {
+    width: 100%; /* Ancho completo de la barra de estado */
+    height: 85px; /* Altura de la barra de estado */
+    background-color: #0d1b3a; /* Color de fondo oscuro para la barra */
+    border-top: 1px solid #0d1b3a; /* Borde superior que coincide con el fondo */
+    position: fixed; /* Fija la barra en la parte inferior de la ventana */
+    bottom: 0; /* Posiciona la barra en la parte inferior */
+    left: 0; /* Posiciona la barra a la izquierda */
+    display: flex; /* Activa flexbox para alinear los elementos dentro de la barra */
+    justify-content: space-around; /* Distribuye uniformemente los elementos dentro de la barra */
+    align-items: center; /* Centra verticalmente los elementos dentro de la barra */
+    font-size: 24px; /* Tamaño de fuente para el texto de la barra de estado */
+    color: #e2e2e2; /* Color del texto en la barra de estado */
+}
+
+.status-item span {
+    font-weight: bold; /* Hace que el texto de los elementos de estado sea más grueso */
+    color: #ffffff; /* Color blanco para el texto de los elementos de estado */
+}
+
+.image-bar {
+    display: flex; /* Activa flexbox para alinear las imágenes */
+    gap: 10px; /* Espacio de 10px entre las imágenes */
+    margin-top: 10px; /* Espacio superior de 10px */
+    margin-left: auto; /* Alinea el contenedor de imágenes a la derecha */
+}
+
+.botones {
+    width: 100px; /* Ancho fijo de 100px para los botones */
+    height: 100px; /* Altura fija de 100px para los botones */
+    color: transparent;
+}
+
+.ticket {
+    border: 1px solid #000;
+    padding: 15px;
+    max-width: 400px;
+}
+.ticket h1 {
+    text-align: center;
+}
+.ticket p {
+    margin: 5px 0;
+}
+.btn-print {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2529b4;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+section{
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #f9f9f9; /* Fondo claro para el ticket */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding en las dimensiones */
+}
